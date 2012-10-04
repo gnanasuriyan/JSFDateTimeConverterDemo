@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Date Time Converter Demo</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h6>Please enter a date in dd/mm/yyyy format</h6>
+		<br/>
+		<h:inputText value="#{dateTimeBean.todayDate}" id="dateTimeField" required="true" requiredMessage="Please enter a date !!!">
+			<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+		</h:inputText>
+		<br/>
+		<h:message for="dateTimeField" style="color:red;font-weight:bold;"/>
+		<br/>
+		<h:commandButton action="success" value="Submit" />
+	</h:form>
+</h:body>   
+   
+</html>

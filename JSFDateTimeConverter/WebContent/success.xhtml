@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Date Time Converter Demo</title>
+</h:head>   
+<h:body>
+	<h3>Date Time Conversion Result</h3>
+	<br/>
+	<table cellpadding="0" cellspacing="0" border="1">
+		<tr>
+			<td>
+				<h:outputText value="dd/MM/YYYY" />
+			</td>
+			<td>
+				<h:outputText value="#{dateTimeBean.todayDate}">
+					<f:convertDateTime type="date" pattern="dd/MM/yyyy" />		
+				</h:outputText>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:outputText value="yyyy.MM.dd G 'at' hh:mm:ss z" />
+			</td>
+			<td>
+				<h:outputText value="#{dateTimeBean.todayDate}">
+					<f:convertDateTime type="date" pattern="yyyy.MM.dd G 'at' hh:mm:ss z" />		
+				</h:outputText>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:outputText value="EEE, MMM d, ''yy" />
+			</td>
+			<td>
+				<h:outputText value="#{dateTimeBean.todayDate}">
+					<f:convertDateTime type="date" pattern="EEE, MMM d, ''yy" />		
+				</h:outputText>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:outputText value="H:mm" />
+			</td>
+			<td>
+				<h:outputText value="#{dateTimeBean.todayDate}">
+					<f:convertDateTime type="date" pattern="H:mm" />		
+				</h:outputText>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h:outputText value="yyyy.MMMMM.dd GGG hh:mm aaa" />
+			</td>
+			<td>
+				<h:outputText value="#{dateTimeBean.todayDate}">
+					<f:convertDateTime type="date" pattern="yyyy.MMMMM.dd GGG hh:mm aaa" />		
+				</h:outputText>
+			</td>
+		</tr>
+	</table>
+</h:body>   
+</html>
